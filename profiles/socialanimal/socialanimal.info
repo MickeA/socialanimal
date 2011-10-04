@@ -1,0 +1,95 @@
+name = socialanimal
+description = Installation profile for socialanimal.se
+version = VERSION
+core = 7.x
+files[] = socialanimal.profile
+
+; Core
+dependencies[] = comment
+dependencies[] = dblog
+dependencies[] = field_ui
+dependencies[] = filter
+dependencies[] = locale
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = path
+dependencies[] = search
+dependencies[] = taxonomy
+dependencies[] = block
+dependencies[] = contextual
+dependencies[] = contact
+
+; Contrib
+dependencies[] = admin_menu_toolbar
+dependencies[] = ctools
+dependencies[] = entity
+dependencies[] = features
+;dependencies[] = feeds
+dependencies[] = flag
+dependencies[] = google_fonts
+dependencies[] = l10n_update
+dependencies[] = libraries
+dependencies[] = module_filter
+dependencies[] = page_manager
+dependencies[] = panels
+dependencies[] = panels_everywhere
+dependencies[] = quicktabs
+dependencies[] = rules
+dependencies[] = semanticviews
+dependencies[] = strongarm
+dependencies[] = token
+dependencies[] = views
+;dependencies[] = views_content
+;dependencies[] = addthis
+;dependencies[] = vms
+dependencies[] = email
+;dependencies[] = menu_position
+;dependencies[] = votingapi
+dependencies[] = menu_block
+;dependencies[] = rb_misc
+;dependencies[] = googleanalytics
+;dependencies[] = vote_up_down
+
+
+; Development modules
+dependencies[] = devel
+dependencies[] = devel_generate
+dependencies[] = diff
+dependencies[] = field_ui
+;dependencies[] = rules_admin
+dependencies[] = views_ui
+
+
+; Features
+;dependencies[] = sa_article
+
+
+; Custom modules
+;dependencies[] = socialanimal_custom
+
+
+; Variables
+variables[admin_theme] = seven
+variables[node_admin_theme] = 1
+variables[theme_default] = socialanimal
+variables[site_name] = Social Animal
+variables[site_mail] = michael@nodeone.se
+variables[site_default_country] = SE
+variables[date_default_timezone] = Europe/Stockholm
+variables[panels_everywhere_site_template_enabled] = 1
+
+; Themes
+themes[] = precision
+themes[] = precision_960_16
+themes[] = socialanimal
+
+admin_theme = seven
+theme = socialanimal
+
+; Languages
+languages[] = sv
+default_language = sv
+
+
+
+

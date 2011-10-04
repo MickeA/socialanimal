@@ -1,0 +1,11 @@
+
+#module-filter-show-wrapper .form-item {
+  display: inline;
+}
+.module-filter-submit {
+  margin-left: 1em;
+}
+.module-filter-submit input.form-submit {
+  margin: 1em 0 0 0.2em;
+  font-size: 1em;
+}

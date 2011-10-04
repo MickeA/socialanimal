@@ -1,0 +1,185 @@
+<?php
+
+/**
+ * Implementation of hook_views_api().
+ */
+function context_admin_views_api() {
+  return array(
+    'api' => 2,
+    'path' => drupal_get_path('module', 'context_admin') . '/includes',
+  );
+}
+
+/**
+ * Implementation of hook_ctools_plugin_directory().
+ */
+function context_admin_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'page_manager' || $owner == 'ctools' || $owner == 'context_admin') {
+    return 'plugins/' . $plugin_type;
+  }
+}
+
+/**
+ * Implements hook_ctools_plugin_type().
+ */
+function context_admin_ctools_plugin_type() {
+  return array(
+    'context_admin' => array(),
+  );
+}
+
+/**
+ * Return the Drupal base path, the module path, and the file name, 
+ * all made into a valid full path.
+ *
+ * $file - The name of the file we are creating a full path for.
+ * $base_path - Boolean (default FALSE) indicator to use the Drupal path
+ * $module - (default context_admin) that module that the file belongs to.
+ * RETURN: the path to, and including the $file
+ */
+function context_admin_get_path($file, $base_path = FALSE, $module = 'context_admin') {
+  $output = $base_path ? base_path() : '';
+  return $output . drupal_get_path('module', $module) . '/' . $file;
+}
+
+/**
+ * Return a new instance of a generic object.
+ *
+ * $name - The name assigned to the new object.
+ */
+function context_admin_create($name) {
+  $cache = new stdClass();
+  $cache->task_name = $name;
+  return $cache;
+}
+
+/**
+ * Return a CTools cache page identified by $name if it exists, or a new
+ * one if it does not.
+ */
+function context_admin_get_page_cache($name) {
+  ctools_include('object-cache');
+  $cache = ctools_object_cache_get('context_admin', $name);
+  if (!$cache) {
+    $cache = context_admin_create($name);
+    $cache->locked = ctools_object_cache_test('context_admin', $name);
+  }
+
+  return $cache;
+}
+
+/**
+ * Store changes to a task handler in the object cache.
+ */
+function context_admin_set_page_cache($name, $page) {
+  $page->changed = TRUE;
+  ctools_include('object-cache');
+  $cache = ctools_object_cache_set('context_admin', $name, $page);
+}
+
+/**
+ * Remove an item from the object cache.
+ */
+function context_admin_clear_page_cache($name) {
+  ctools_include('object-cache');
+  ctools_object_cache_clear('context_admin', $name);
+}
+
+/**
+ * Return info about all the plugins (currently in context_admin only) 
+ *
+ * $type - currently this always 'context_admin'. But the call was
+ *    written genericly 
+ * $options - An array of options. We are only looking for an 'id'
+ *    in this array.
+ */
+function context_admin_get_plugins($type, $options = array()) {
+  $id = isset($options['id']) ? $options['id'] : NULL;
+  ctools_include('plugins');
+  ctools_include('context');
+  if (is_null($id)) {
+    $plugins = ctools_get_plugins('context_admin', $type);
+  }
+  else {
+    $plugins = ctools_get_plugins('context_admin', $type, $id);
+  }
+  return $plugins;
+}
+
+/**
+ * Build a plugins array subset of context_admin where only the plugins
+ * that are needed in the passed context.
+ */
+function context_admin_get_contextual_plugins($contexts) {
+  $all_plugins = context_admin_get_plugins('context_admin');
+  $plugins = array();
+  foreach ($all_plugins as $id => $plugin) {
+    if (!empty($plugin['required context']) && !ctools_context_match_requirements($contexts, $plugin['required context'])) {
+      continue;
+    }
+    $plugins[$id] = $plugin;
+  }
+
+  return $plugins;
+}
+
+/**
+ * Helper function for exposing new core/contrib hooks or alter functions to
+ * context_admin plugins.
+ *
+ * $plugin_callback - the key within the $plugin array in the plugin for the
+ * hook or alter function specific to the plugin.
+ * $callback_type - either hook or alter, hooks will use func_get_args which
+ * passes by value, and alters will use debug_backtrace to pass by reference.
+ */
+function context_admin_plugin_callback_invoke($plugin_callback, $callback_type) {
+  // Checking to make sure that we're on a context_admin generated form
+  $page = page_manager_get_current_page();
+  $plugin = '';
+  if ($page) {
+    if (isset($page['handler']->conf['context_admin_options'])) {
+      $plugin = $page['handler']->conf['context_admin_options'];
+    }
+
+    ctools_include('plugins');
+    if ($callback_type == 'alter') {
+      $stack = debug_backtrace();
+      if (isset($stack[0]["args"])) {
+        $args = array();
+        for($i=0; $i < count($stack[0]["args"]); $i++) {
+          $args[$i] = &$stack[0]["args"][$i];
+        }
+      }
+    }
+    elseif ($callback_type == 'hook') {
+      $args = func_get_args();
+    }
+    unset($args[0]);
+    unset($args[1]);
+    $args[] = $page;
+    if ($callback = ctools_plugin_load_function('context_admin', 'context_admin', $plugin, $plugin_callback)) {
+      call_user_func_array($callback, $args);
+    }
+  }
+}
+
+/**
+ * Implementation of hook_form_alter
+ */
+function context_admin_form_alter(&$form, &$form_state, $form_id) {
+  $args = array(
+    'form alter',
+    'alter',
+    &$form,
+    &$form_state,
+    $form_id
+  );
+  call_user_func_array('context_admin_plugin_callback_invoke', $args);
+}
+
+/**
+ * Implementation of hook_node_insert
+ */
+function context_admin_node_insert($node) {
+  context_admin_plugin_callback_invoke('node insert', 'hook', $node);
+}

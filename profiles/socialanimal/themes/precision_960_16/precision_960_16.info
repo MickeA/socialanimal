@@ -1,0 +1,15 @@
+name = Precision (960 Grid & 16 Columns)
+description = Precision base theme tweaked to use a 960 Grid with 16 columns
+core = 7.x
+engine = phptemplate
+
+base theme = precision
+
+stylesheets[all][] = css/reset.css
+stylesheets[all][] = css/grid.css
+
+plugins[panels][layouts] = plugins/layouts
+plugins[panels][styles] = plugins/styles
+
+api[panels][styles][version] = 2
+

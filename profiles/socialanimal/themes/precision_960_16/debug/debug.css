@@ -1,0 +1,70 @@
+/**
+ * Debug
+ */
+body.show-grid .region {
+ background: url(img/1-col.gif);
+}
+
+body.show-grid .region .grid-1:hover {
+  background: rgba(110, 196, 227, 0.3) url(img/grid_01.png) no-repeat top right;
+}
+
+body.show-grid .region .grid-2:hover {
+  background: rgba(110, 196, 227, 0.3) url(img/grid_02.png) no-repeat top right;
+}
+
+body.show-grid .region .grid-3:hover {
+  background: rgba(110, 196, 227, 0.3) url(img/grid_03.png) no-repeat top right;
+}
+
+body.show-grid .region .grid-4:hover {
+  background: rgba(110, 196, 227, 0.3) url(img/grid_04.png) no-repeat top right;
+}
+
+body.show-grid .region .grid-5:hover {
+  background: rgba(110, 196, 227, 0.3) url(img/grid_05.png) no-repeat top right;
+}
+
+body.show-grid .region .grid-6:hover {
+  background: rgba(110, 196, 227, 0.3) url(img/grid_06.png) no-repeat top right;
+}
+
+body.show-grid .region .grid-7:hover {
+  background: rgba(110, 196, 227, 0.3) url(img/grid_07.png) no-repeat top right;
+}
+
+body.show-grid .region .grid-8:hover {
+  background: rgba(110, 196, 227, 0.3) url(img/grid_08.png) no-repeat top right;
+}
+
+body.show-grid .region .grid-9:hover {
+  background: rgba(110, 196, 227, 0.3) url(img/grid_09.png) no-repeat top right;
+}
+
+body.show-grid .region .grid-10:hover {
+  background: rgba(110, 196, 227, 0.3) url(img/grid_10.png) no-repeat top right;
+}
+
+body.show-grid .region .grid-11:hover {
+  background: rgba(110, 196, 227, 0.3) url(img/grid_11.png) no-repeat top right;
+}
+
+body.show-grid .region .grid-12:hover {
+  background: rgba(110, 196, 227, 0.3) url(img/grid_12.png) no-repeat top right;
+}
+
+body.show-grid .region .grid-13:hover {
+  background: rgba(110, 196, 227, 0.3) url(img/grid_13.png) no-repeat top right;
+}
+
+body.show-grid .region .grid-14:hover {
+  background: rgba(110, 196, 227, 0.3) url(img/grid_14.png) no-repeat top right;
+}
+
+body.show-grid .region .grid-15:hover {
+  background: rgba(110, 196, 227, 0.3) url(img/grid_15.png) no-repeat top right;
+}
+
+body.show-grid .region .grid-16:hover {
+  background: rgba(110, 196, 227, 0.3) url(img/grid_16.png) no-repeat top right;
+}
