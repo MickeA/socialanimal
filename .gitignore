@@ -1,0 +1,13 @@
+log/*
+!log/README.txt
+tmp/*
+!tmp/README.txt
+web/sites/*/backup
+web/sites/*/files/*
+!web/sites/*/files/README.txt
+.DS_Store
+nbproject
+._*
+.sass-cache
+.project
+.settings
