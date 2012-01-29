@@ -16,6 +16,8 @@ dependencies[] = dblog
 dependencies[] = help
 dependencies[] = menu
 dependencies[] = taxonomy
+dependencies[] = field_ui
+
 
 ; Contrib
 dependencies[] = admin_menu
@@ -47,6 +49,7 @@ dependencies[] = views_ui
 
 ; Silvia Media features
 dependencies[] = sa_core
+dependencies[] = sa_music
 
 
 ; NodeStream features. We can pick which features we want to use,

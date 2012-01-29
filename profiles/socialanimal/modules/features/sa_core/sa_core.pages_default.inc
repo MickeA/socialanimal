@@ -49,15 +49,11 @@ function sa_core_default_page_manager_handlers() {
     $pane = new stdClass;
     $pane->pid = 'new-1';
     $pane->panel = 'content';
-    $pane->type = 'page_content';
-    $pane->subtype = 'page_content';
+    $pane->type = 'page_messages';
+    $pane->subtype = 'page_messages';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array(
-      'context' => 'argument_page_content_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
+    $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -71,11 +67,15 @@ function sa_core_default_page_manager_handlers() {
     $pane = new stdClass;
     $pane->pid = 'new-2';
     $pane->panel = 'content';
-    $pane->type = 'page_messages';
-    $pane->subtype = 'page_messages';
+    $pane->type = 'page_content';
+    $pane->subtype = 'page_content';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'context' => 'argument_page_content_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -105,7 +105,7 @@ function sa_core_default_page_manager_handlers() {
     $display->content['new-3'] = $pane;
     $display->panels['navigation'][0] = 'new-3';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = 'new-2';
   $handler->conf['display'] = $display;
   $export['site_template_panel_context'] = $handler;
 
