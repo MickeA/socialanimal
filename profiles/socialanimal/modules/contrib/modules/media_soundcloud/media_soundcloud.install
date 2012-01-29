@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Media: SoundCloud module.
+ */
+
+/**
+ * Implement hook_install().
+ */
+function media_soundcloud_install() {
+  return array();
+}
+
+/**
+ * Implement hook_uninstall().
+ */
+function media_soundcloud_uninstall() {
+  foreach (media_soundcloud_variable_default() as $variable => $value) {
+    media_soundcloud_variable_del($variable);
+  }
+  return array(array('success' => TRUE, 'query' => "Deleted all variables in the Media: SoundCloud namespace."));
+}
+
+

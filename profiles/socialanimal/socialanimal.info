@@ -34,6 +34,11 @@ dependencies[] = wysiwyg
 dependencies[] = views_slideshow
 dependencies[] = views_slideshow_cycle
 dependencies[] = google_fonts
+dependencies[] = file_entity
+dependencies[] = media
+dependencies[] = media_internet
+dependencies[] = media_soundcloud
+
 
 ; DEVELOPMENT MODULES
 dependencies[] = devel
