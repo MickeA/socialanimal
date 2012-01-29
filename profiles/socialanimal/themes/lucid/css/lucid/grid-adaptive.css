@@ -1,0 +1,297 @@
+/**
+ * Adaptive grid for mobile devices 
+ */
+ 
+ /*
+ * Grid for 768 layout Adaptive  
+ * Responds to browsers smaller than 960px;
+ */
+ 
+ @media only screen and (max-width: 959px)  {
+
+   body {
+     min-width: 768px;
+   }
+
+   /**
+    * Containers 
+   */
+
+   .container-12 {
+     margin-left: auto;
+     margin-right: auto;
+     width: 768px;
+   }
+
+   /**
+    * Grid 
+   */
+
+   .grid-1,
+   .grid-2,
+   .grid-3,
+   .grid-4,
+   .grid-5,
+   .grid-6,
+   .grid-7,
+   .grid-8,
+   .grid-9,
+   .grid-10,
+   .grid-11,
+   .grid-12 {
+     display:inline;
+     float: left;
+     position: relative;
+     margin-left: 10px;
+     margin-right: 10px;
+   }
+
+   .push-1, .pull-1,
+   .push-2, .pull-2,
+   .push-3, .pull-3,
+   .push-4, .pull-4,
+   .push-5, .pull-5,
+   .push-6, .pull-6,
+   .push-7, .pull-7,
+   .push-8, .pull-8,
+   .push-9, .pull-9,
+   .push-10, .pull-10,
+   .push-11, .pull-11,
+   .push-12, .pull-12 {
+     position: relative;
+   }
+   
+   /**
+    * Grid 12 Columns 
+   */
+
+   .container-12 .grid-1 {
+     width: 44px;
+   }
+   .container-12 .grid-2 {
+     width: 108px;
+   }
+   .container-12 .grid-3 {
+     width: 172px;
+   }
+   .container-12 .grid-4 {
+     width: 236px;
+   }
+   .container-12 .grid-5 {
+     width: 300px;
+   }
+   .container-12 .grid-6 {
+     width: 364px;
+   }
+   .container-12 .grid-7 {
+     width: 428px;
+   }
+   .container-12 .grid-8 {
+     width: 492px;
+   }
+   .container-12 .grid-9 {
+     width: 556px;
+   }
+   .container-12 .grid-10 {
+     width: 620px;
+   }
+   .container-12 .grid-11 {
+     width: 684px;
+   }
+   .container-12 .grid-12 {
+     width: 748px;
+   }
+
+   /**
+    * Prefix Extra Space -- 12 Columns 
+   */
+
+   .container-12 .prefix-1 {
+     padding-left: 64px;
+   }
+   .container-12 .prefix-2 {
+     padding-left: 128px;
+   }
+   .container-12 .prefix-3 {
+     padding-left: 192px;
+   }
+   .container-12 .prefix-4 {
+     padding-left: 256px;
+   }
+   .container-12 .prefix-5 {
+     padding-left: 320px;
+   }
+   .container-12 .prefix-6 {
+     padding-left: 384px;
+   }
+   .container-12 .prefix-7 {
+     padding-left: 448px;
+   }
+   .container-12 .prefix-8 {
+     padding-left: 512px;
+   }
+   .container-12 .prefix-9 {
+     padding-left: 576px;
+   }
+   .container-12 .prefix-10 {
+     padding-left: 640px;
+   }
+   .container-12 .prefix-11 {
+     padding-left: 704px;
+   }
+   
+   /**
+    * Suffix Extra space -- 12 Columns 
+   */
+
+   .container-12 .suffix-1 {
+     padding-right: 64px;
+   }
+   .container-12 .suffix-2 {
+     padding-right: 128px;
+   }
+   .container-12 .suffix-3 {
+     padding-right: 192px;
+   }
+   .container-12 .suffix-4 {
+     padding-right: 256px;
+   }
+   .container-12 .suffix-5 {
+     padding-right: 320px;
+   }
+   .container-12 .suffix-6 {
+     padding-right: 384px;
+   }
+   .container-12 .suffix-7 {
+     padding-right: 448px;
+   }
+   .container-12 .suffix-8 {
+     padding-right: 512px;
+   }
+   .container-12 .suffix-9 {
+     padding-right: 576px;
+   }
+   .container-12 .suffix-10 {
+     padding-right: 640px;
+   }
+   .container-12 .suffix-11 {
+     padding-right: 704px;
+   }
+
+   /**
+    * Push space -- 12 Columns 
+   */
+
+   .container-12 .push-1 {
+     left: 64px;
+   }
+   .container-12 .push-2 {
+     left: 128px;
+   }
+   .container-12 .push-3 {
+     left: 192px;
+   }
+   .container-12 .push-4 {
+     left: 256px;
+   }
+   .container-12 .push-5 {
+     left: 320px;
+   }
+   .container-12 .push-6 {
+     left: 384px;
+   }
+   .container-12 .push-7 {
+     left: 448px;
+   }
+   .container-12 .push-8 {
+     left: 512px;
+   }
+   .container-12 .push-9 {
+     left: 576px;
+   }
+   .container-12 .push-10 {
+     left: 640px;
+   }
+   .container-12 .push-11 {
+     left: 704px;
+   }
+
+
+   /**
+    * Pull space -- 12 Columns 
+   */
+
+   .container-12 .pull-1 {
+     left: -64px;
+   }
+   .container-12 .pull-2 {
+     left: -128px;
+   }
+   .container-12 .pull-3 {
+     left: -192px;
+   }
+   .container-12 .pull-4 {
+     left: -256px;
+   }
+   .container-12 .pull-5 {
+     left: -320px;
+   }
+   .container-12 .pull-6 {
+     left: -384px;
+   }
+   .container-12 .pull-7 {
+     left: -448px;
+   }
+   .container-12 .pull-8 {
+     left: -512px;
+   }
+   .container-12 .pull-9 {
+     left: -576px;
+   }
+   .container-12 .pull-10 {
+     left: -640px;
+   }
+   .container-12 .pull-11 {
+     left: -704px;
+   }
+
+ }
+
+
+ /*
+ * Grid for 480 layout Adaptive
+ * Responds to browsers smaller than 768px;
+ */
+
+@media only screen and (max-width: 767px) {
+
+}
+
+
+ /*
+ * Grid for 320 layout Adaptive
+ * Responds to browsers smaller than 480px;
+ */
+
+@media only screen and (max-width: 479px) {
+
+   .container-12 {
+     width: 320px;
+   }
+
+   .container-12 .grid-1,
+   .container-12 .grid-2,
+   .container-12 .grid-3,
+   .container-12 .grid-4,
+   .container-12 .grid-5,
+   .container-12 .grid-6,
+   .container-12 .grid-7,
+   .container-12 .grid-8,
+   .container-12 .grid-9,
+   .container-12 .grid-10,
+   .container-12 .grid-11,
+   .container-12 .grid-12, {
+     width: 320px;
+   }
+
+}

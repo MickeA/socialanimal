@@ -1,0 +1,79 @@
+.branding {
+  padding: 20px 0;
+  background: #eee;
+}
+#site-name {
+  margin: 0;
+  line-height: 1;
+  font-size: 22px;
+  font-weight: bold;
+}
+.branding hgroup {
+  float: left;
+}
+.branding #search-block-form {
+  float: right;
+}
+.branding nav {
+  clear: both;
+  padding-top: 20px;
+}
+.branding nav li {
+  float: left;
+  margin-right: 2px;
+}
+.branding nav li a {
+  float: left;
+  color: #444;
+  font-weight: bold;
+  padding: 6px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.branding nav li a:hover,
+.branding nav li a.active {
+  background: #fff;
+  text-decoration: none;
+}
+
+.content {
+  padding: 20px 0;
+  background: #fff;
+}
+
+aside section {
+  margin-bottom: 20px;
+}
+aside section.last {
+  margin-bottom: 0;
+}
+
+footer[role="contentinfo"] {
+  clear: both;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+}
+footer[role="contentinfo"] section {
+  float: left;
+  margin-right: 20px;
+}
+footer[role="contentinfo"] section.last {
+  margin: 0;
+}
+
+header.header-alpha {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+/*
+ * Media queries for responsive design.
+ */
+@media screen and (max-width: 650px) {
+}
+
+@media screen and (max-width: 480px) { 
+}

@@ -1,0 +1,113 @@
+
+
+
+#logo{
+  float: left;
+  margin:0 30px 0 10px;
+}
+
+/** PRIMARY LINKS **/
+
+#primary-links{
+  font-family: 'six caps';
+  font-size: 7.3em;
+  float: left;
+  -webkit-transition: font-size .40s linear;
+  transition: font-size .40s linear;
+}
+#primary-links ul{
+  display: inline-block;
+  line-height: 0.9;
+}
+#primary-links ul li{
+  
+  float: left;
+  margin-right:20px;
+
+}
+
+#primary-links ul li a{
+  color:#000;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  letter-spacing: 4px;
+}
+#primary-links ul li a:hover,
+#primary-links ul li a:focus,
+#primary-links ul li a:active{
+  color:#00CCCC;
+}
+#primary-links ul li a.active,
+#primary-links ul li a.active-trail{
+ color: #C46CA5;
+ border-bottom: 2px #C46CA5 dashed;
+}
+
+
+/** MEDIA QUERIES**/
+
+@media all and (max-width: 1050px) {
+
+  #primary-links {
+    font-size: 6.5em;
+    -webkit-transition: font-size .40s linear;
+    transition: font-size .40s linear;
+  }
+}
+
+@media all and (max-width: 950px) {
+
+  #primary-links {
+    margin-top:10px;
+    -webkit-transition: margin-top .40s linear;
+    -moz-transition: margin-top .40s linear;
+    transition: margin-top .40s linear;
+
+    font-size: 5.5em;
+    -webkit-transition: font-size .40s linear;
+    -moz-transition: font-size .40s linear;
+    transition: font-size .40s linear;
+
+  }
+}
+
+@media all and (max-width: 850px) {
+
+  #primary-links {
+     margin-top:20px;
+    -webkit-transition: margin-top .40s linear;
+    -moz-transition: margin-top .40s linear;
+    transition: margin-top .40s linear;
+
+    font-size: 4.5em;
+    -webkit-transition: font-size .40s linear;
+    -moz-transition: font-size .40s linear;
+    transition: font-size .40s linear;
+  }
+}
+
+@media all and (max-width: 750px) {
+
+  #primary-links {
+     margin-top:30px;
+    -webkit-transition: margin-top .40s linear;
+    -moz-transition: margin-top .40s linear;
+    transition: margin-top .40s linear;
+
+    font-size: 3.5em;
+    -webkit-transition: font-size .40s linear;
+    -moz-transition: font-size .40s linear;
+    transition: font-size .40s linear;
+    
+  }
+}
+
+@media all and (max-width: 650px) {
+  #logo{
+    float: none;
+    text-align:center;
+    margin:0 30px 0 10px;
+
+  }
+}

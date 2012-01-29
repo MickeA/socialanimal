@@ -1,0 +1,49 @@
+
+name = Social Animal
+description = Installation profile for Social Animal
+core = 7.x
+theme = seven
+
+; NS Core is a module that contains the upgrade path for all NodeStream
+; sites and some other goodies that is required for NodeStream to work.
+; We use a module instead of a profile, since it we can make NodeStream
+; features profile independent.
+dependencies[] = ns_core
+
+; Core
+dependencies[] = menu
+dependencies[] = dblog
+dependencies[] = help
+dependencies[] = menu
+dependencies[] = taxonomy
+
+; Contrib
+dependencies[] = admin_menu
+dependencies[] = admin_menu_toolbar
+dependencies[] = taxonomy_menu_form
+dependencies[] = views
+dependencies[] = panels
+dependencies[] = panels_everywhere
+dependencies[] = panels_mini
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = diff
+dependencies[] = pathauto
+dependencies[] = strongarm
+dependencies[] = wysiwyg
+dependencies[] = views_slideshow
+dependencies[] = views_slideshow_cycle
+dependencies[] = google_fonts
+
+; DEVELOPMENT MODULES
+dependencies[] = devel
+dependencies[] = views_ui
+
+
+; Silvia Media features
+dependencies[] = sa_core
+
+
+; NodeStream features. We can pick which features we want to use,
+; no NodeStream features are required.
+; dependencies[] = ns_ch_web
