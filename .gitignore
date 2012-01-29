@@ -11,3 +11,5 @@ nbproject
 .sass-cache
 .project
 .settings
+sites/default/files*
+sites/default/files/*
