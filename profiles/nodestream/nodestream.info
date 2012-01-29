@@ -1,0 +1,32 @@
+
+name = NodeStream
+description = Default installation profile for NodeStream.
+core = 7.x
+theme = bartik
+
+; Contrib
+dependencies[] = uuid
+dependencies[] = uuid_node
+dependencies[] = uuid_user
+dependencies[] = uuid_role
+dependencies[] = entitycache
+dependencies[] = nodestream
+dependencies[] = libraries
+dependencies[] = features
+
+; NodeStream
+dependencies[] = ns_core
+
+; Recommended modules will be installed by default but they are not required for
+; NodeStream to operate.
+nodestream_recommended[] = menu
+nodestream_recommended[] = admin_menu
+nodestream_recommended[] = admin_menu_toolbar
+nodestream_recommended[] = dblog
+nodestream_recommended[] = help
+nodestream_recommended[] = ns_roles
+nodestream_recommended[] = defaultconfig
+nodestream_recommended[] = menu
+nodestream_recommended[] = taxonomy
+nodestream_recommended[] = uuid_taxonomy
+nodestream_recommended[] = taxonomy_menu_form
