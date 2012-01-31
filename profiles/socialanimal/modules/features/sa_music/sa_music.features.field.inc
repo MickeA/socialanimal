@@ -10,75 +10,90 @@
 function sa_music_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-music-field_music_iframe'
-  $fields['node-music-field_music_iframe'] = array(
+  // Exported field: 'node-music-field_music_file'
+  $fields['node-music-field_music_file'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_music_iframe',
+      'field_name' => 'field_music_file',
       'foreign keys' => array(
-        'format' => array(
+        'fid' => array(
           'columns' => array(
-            'format' => 'format',
+            'fid' => 'fid',
           ),
-          'table' => 'filter_format',
+          'table' => 'file_managed',
         ),
       ),
       'indexes' => array(
-        'format' => array(
-          0 => 'format',
+        'fid' => array(
+          0 => 'fid',
         ),
       ),
-      'module' => 'text',
-      'settings' => array(),
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 1,
+        'display_field' => 1,
+        'uri_scheme' => 'public',
+      ),
       'translatable' => '0',
-      'type' => 'text_long',
+      'type' => 'file',
     ),
     'field_instance' => array(
       'bundle' => 'music',
-      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'hidden',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '1',
+          'module' => 'jplayer',
+          'settings' => array(
+            'autoplay' => '0',
+            'backgroundColor' => '000000',
+            'mode' => 'playlist',
+            'muted' => '0',
+            'preload' => 'metadata',
+            'repeat' => 'none',
+            'solution' => 'html, flash',
+            'volume' => '80',
+          ),
+          'type' => 'jplayer_player',
+          'weight' => '2',
         ),
         'teaser' => array(
           'label' => 'above',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => 0,
+          'weight' => '0',
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_music_iframe',
-      'label' => 'music iframe',
+      'field_name' => 'field_music_file',
+      'label' => 'Music file',
       'required' => 0,
       'settings' => array(
-        'text_processing' => '1',
+        'description_field' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'mp3',
+        'max_filesize' => '',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'text',
+        'module' => 'file',
         'settings' => array(
-          'rows' => '5',
+          'progress_indicator' => 'throbber',
         ),
-        'type' => 'text_textarea',
-        'weight' => '1',
+        'type' => 'file_generic',
+        'weight' => '31',
       ),
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('music iframe');
+  t('Music file');
 
   return $fields;
 }

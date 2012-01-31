@@ -11,7 +11,6 @@ $plugin = array(
   'category' => 'Social Animal',
   'regions' => array(
     'navigation' => t('Navigation'),
-    'branding' => t('Branding'),
     'content' => t('Content'),
     'closure' => t('Closure'),
   ),

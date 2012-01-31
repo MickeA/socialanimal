@@ -1,48 +1,24 @@
-
-
-
 #logo{
-  float: left;
-  margin:0 30px 0 10px;
-}
-
-/** PRIMARY LINKS **/
-
-#primary-links{
-  font-family: 'six caps';
-  font-size: 7.3em;
-  float: left;
-  -webkit-transition: font-size .40s linear;
-  transition: font-size .40s linear;
-}
-#primary-links ul{
-  display: inline-block;
-  line-height: 0.9;
-}
-#primary-links ul li{
   
-  float: left;
-  margin-right:20px;
-
 }
 
-#primary-links ul li a{
-  color:#000;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  letter-spacing: 4px;
+
+/**
+ * Social Animal Music player
+ **/
+#music-player{
+  position: absolute;
+  right:0px;
+  bottom: 23px;
+  z-index: 100;
+  background: rgba(102,102,102,0.7);
 }
-#primary-links ul li a:hover,
-#primary-links ul li a:focus,
-#primary-links ul li a:active{
-  color:#00CCCC;
+div.jp-interface,
+div.jp-playlist{
+  background-color: transparent;
+  border:0;
 }
-#primary-links ul li a.active,
-#primary-links ul li a.active-trail{
- color: #C46CA5;
- border-bottom: 2px #C46CA5 dashed;
-}
+
 
 
 /** MEDIA QUERIES**/

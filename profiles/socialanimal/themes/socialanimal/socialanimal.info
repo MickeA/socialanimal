@@ -11,5 +11,6 @@ stylesheets[all][] = css/sa.css
 
 ; scripts[] = "../../libraries/jquery.cycle/jquery.cycle.min.js"
 ; scripts[] = "../../libraries/jquery.uniform/jquery.uniform.min.js"
+scripts[] = "scripts/sa.js"
 
 plugins[panels][layouts] = layouts

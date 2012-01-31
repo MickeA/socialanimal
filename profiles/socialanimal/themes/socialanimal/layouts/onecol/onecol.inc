@@ -10,6 +10,7 @@ $plugin = array(
   'icon' => 'onecol.png',
   'category' => 'Social Animal',
   'regions' => array(
+    'branding' => t('Branding'),
     'main' => t('Main'),
   ),
 );

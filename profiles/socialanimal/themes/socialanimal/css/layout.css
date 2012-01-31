@@ -1,7 +1,9 @@
 
 /** STICKY FOOTER CSS **/
 html, body {height: 100%;}
-
+body{
+  background: #f2f1ee;
+}
 #page {min-height: 100%;}
 
 .main {overflow:auto;
@@ -29,33 +31,32 @@ body:before {
 }
 .header .container-12 .grid-12,
 .main .container-12 .grid-12{
-  margin: 10px 1.5625%;
+  /*margin: 10px 1.5625%;*/
 }
 .container-12 .grid-12,
 .closure .footer .footer-inner {
-  width:96.875%;
-}
-.main{
-  margin-top:-75px;
+  /*width:96.875%;*/
 }
 
+/** BRANDING **/
+.branding{
+  position: relative;
+}
 
 /** HEADER**/
 .header {
-  padding: 0px 0px 105px 0;
-  background: #CB64A4 url(../images/sa_bg.png) repeat 50% 0;
-  border-bottom:4px solid rgba(102,102,102,0.5);
+
+ /* background: #fff url(../images/sa_bg.png) repeat 50% 0;*/
 }
 .header .navigation{
-  outline:4px solid rgba(102,102,102,0.5);
-  background: #FFF;
+  
 }
 
 /** FOOTER **/
 .closure{
   padding: 35px 0 55px 0;
-  background: #CB64A4 url(../images/sa_bg.png) repeat 50% 0;
-  box-shadow: 0px 2px 3px rgba(0,0,0,0.3) inset;
+ /* background: #CB64A4 url(../images/sa_bg.png) repeat 50% 0;
+  box-shadow: 0px 2px 3px rgba(0,0,0,0.3) inset;*/
 }
 .closure .footer{
   width:auto;
@@ -69,27 +70,3 @@ body:before {
 }
 
 /** MAIN **/
-.main .container-12{
-   border-top:4px solid rgba(102,102,102,0.5);
-}
-.main .container-12 .container-inner{
-  background: #fff;
-  position:relative;
-  min-height:71px;
-}
-.main .container-12 .container-inner #border-left,
-.main .container-12 .container-inner #border-right{
-  display:block;
-  width:4px;
-  height:71px;
-  background:rgba(102,102,102,0.5);
-  position:absolute;
-  top:-4px;
-}
-.main .container-12 .container-inner #border-left{
-  left:-4px;
-}
-.main .container-12 .container-inner #border-right
-{
-  right:-4px;
-}
