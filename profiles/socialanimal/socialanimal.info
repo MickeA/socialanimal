@@ -27,6 +27,7 @@ dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
 dependencies[] = taxonomy_menu_form
 dependencies[] = views
+dependencies[] = views_panes
 dependencies[] = panels
 dependencies[] = panels_everywhere
 dependencies[] = panels_mini
