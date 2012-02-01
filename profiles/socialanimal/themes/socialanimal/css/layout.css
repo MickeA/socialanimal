@@ -1,17 +1,15 @@
 
 /** STICKY FOOTER CSS **/
 html, body {height: 100%;}
-body{
-  background: #f2f1ee;
-}
 #page {min-height: 100%;}
 
-.main {overflow:auto;
-	padding-bottom: 290px;}  /* must be same height as the footer */
+.page-inner {overflow:auto;
+	padding-bottom: 140px;}  /* must be same height as the footer */
 
-.closure {position: relative;
-	margin-top: -290px; /* negative value of footer height */
-	height: 200px;
+.closure  {position: relative;
+	margin-top: -140px; /* negative value of footer height */
+	height: 100px;
+  padding:20px 0;
 	clear:both;}
 
 /*Opera Fix*/
@@ -54,19 +52,14 @@ body:before {
 
 /** FOOTER **/
 .closure{
-  padding: 35px 0 55px 0;
- /* background: #CB64A4 url(../images/sa_bg.png) repeat 50% 0;
-  box-shadow: 0px 2px 3px rgba(0,0,0,0.3) inset;*/
+  background: transparent url(../images/stripe-bg.png) repeat 0 0;
 }
 .closure .footer{
   width:auto;
- 
-}
-.footer-wrapper{
-  background: #333;
-  height:192px;
-  border-top: 4px solid #fff;
-  border-bottom: 4px solid #fff;
+  
 }
 
 /** MAIN **/
+.main{
+  padding:10px 0;
+}

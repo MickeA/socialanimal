@@ -7,35 +7,34 @@
 ?>
 
 <div id="page">
-  <header class="header" role="banner">
-     <?php if (!empty($content['navigation'])): ?>
-        <div class="container-12 clearfix navigation">
+  <div class="page-inner">
+    <header class="header" role="banner">
+       <?php if (!empty($content['navigation'])): ?>
+          <div class="container-12 clearfix navigation">
+            <div class="grid-12 clearfix">
+              <?php print render($content['navigation']); ?>
+            </div>
+          </div>
+       <?php endif; ?>
+    </header>
+
+    <?php if (!empty($content['content'])): ?>
+      <div class="main" role="main">
+        <div class="container-12 clearfix">
           <div class="grid-12 clearfix">
-            <?php print render($content['navigation']); ?>
+            <?php print render($content['content']); ?>
           </div>
         </div>
-     <?php endif; ?>
-  </header>
-  
-  <?php if (!empty($content['content'])): ?>
-    <div class="main" role="main">
-      <div class="container-12 clearfix">
-        <div class="grid-12 clearfix">
-          <?php print render($content['content']); ?>
-        </div>
       </div>
-    </div>
-  <?php endif; ?>
+    <?php endif; ?>
+  </div>
 </div>
-
   <?php if (!empty($content['closure'])): ?>
     <footer class="closure clearfix" role="contentinfo">
-      <div class="footer-wrapper clearfix">
         <div class="container-12 clearfix footer">
           <div class="grid-12 clearfix footer-inner">
             <?php print render($content['closure']); ?>
           </div>
         </div>
-      </div>
     </footer>
   <?php endif; ?>

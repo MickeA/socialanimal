@@ -1,25 +1,27 @@
+body{
+  background:#e9e1da url("../images/sa-bg.jpg") repeat scroll 0 0;
+}
+.header .grid-12{
+  background: transparent url("../images/2line-border.png") repeat-x scroll 0 100%;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
 #logo{
   
 }
 
 
-.pane-page-site-name{
-  font-family: OstrichSansBold, sans-serif;
-  font-size: 100px;
-  line-height: 1;
-  text-align: center;
-}
-
-h1, h2, h3, h4, h5, h6 { font-family: Almendra; font-style: normal; font-weight: bold !important; }
-
 /**
  * Social Animal Music player
  **/
 #music-player{
-  position: absolute;
-  right:0px;
-  bottom: 23px;
+  position: relative;
   z-index: 100;
+}
+#music-player .pane-content{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
   background: rgba(102,102,102,0.7);
 }
 div.jp-interface,
@@ -28,6 +30,26 @@ div.jp-playlist{
   border:0;
 }
 
+/**
+ * Image slideshow
+ **/
+.views-slideshow-controls-bottom{
+  position: absolute;
+  top:50%;
+  z-index: 100;
+  color:#fff;
+}
+.view-image-slide{
+  line-height: 0;
+}
+
+/**
+ * Social links
+ **/
+.social-links{
+  background: transparent url("../images/stripe-bg.png") repeat scroll 0 0;
+  height: 40px;
+}
 
 
 /** MEDIA QUERIES**/
