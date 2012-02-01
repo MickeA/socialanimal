@@ -4,13 +4,17 @@ core = "7.x"
 engine = "phptemplate"
 
 stylesheets[all][] = css/sa-reset.css
+stylesheets[all][] = css/fonts.css
 stylesheets[all][] = css/fluid_grid.css
 stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/typography.css
 stylesheets[all][] = css/sa.css
 
+
 ; scripts[] = "../../libraries/jquery.cycle/jquery.cycle.min.js"
 ; scripts[] = "../../libraries/jquery.uniform/jquery.uniform.min.js"
 scripts[] = "scripts/sa.js"
+
+
 
 plugins[panels][layouts] = layouts

@@ -21,13 +21,12 @@ dependencies[] = field_ui
 dependencies[] = file
 dependencies[] = filter
 
-
 ; Contrib
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
 dependencies[] = taxonomy_menu_form
 dependencies[] = views
-dependencies[] = views_panes
+dependencies[] = views_content
 dependencies[] = panels
 dependencies[] = panels_everywhere
 dependencies[] = panels_mini
@@ -44,19 +43,15 @@ dependencies[] = file_entity
 dependencies[] = media
 dependencies[] = image
 
-
-
 ; DEVELOPMENT MODULES
 dependencies[] = devel
 dependencies[] = views_ui
 dependencies[] = module_filter
 
-
 ; Silvia Media features
 dependencies[] = sa_core
 dependencies[] = sa_music
 dependencies[] = sa_image_slideshow
-
 
 ; NodeStream features. We can pick which features we want to use,
 ; no NodeStream features are required.
