@@ -333,6 +333,33 @@ function sa_core_default_page_manager_pages() {
     $display->panels['branding'][1] = 'new-8';
     $pane = new stdClass;
     $pane->pid = 'new-9';
+    $pane->panel = 'branding';
+    $pane->type = 'custom';
+    $pane->subtype = 'custom';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'admin_title' => 'social media & music links',
+      'title' => '',
+      'body' => 'Spotify | iTunes | SoundCloud | CdBaby | MySpace | Amazone | Facebook',
+      'format' => 'plain_text',
+      'substitute' => NULL,
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'social-links',
+    );
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-9'] = $pane;
+    $display->panels['branding'][2] = 'new-9';
+    $pane = new stdClass;
+    $pane->pid = 'new-10';
     $pane->panel = 'main';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -353,8 +380,8 @@ function sa_core_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['main'][0] = 'new-9';
+    $display->content['new-10'] = $pane;
+    $display->panels['main'][0] = 'new-10';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
