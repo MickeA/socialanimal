@@ -1,0 +1,116 @@
+/*
+ * Skin for jPlayer Plugin (jQuery JavaScript Library)
+ * http://www.happyworm.com/jquery/jplayer
+ *
+ * Skin Name: Blue Monday
+ *
+ * Copyright (c) 2010 Happyworm Ltd
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http://www.opensource.org/licenses/mit-license.php
+ *  - http://www.gnu.org/copyleft/gpl.html
+ *
+ * Author: Silvia Benvenuti
+ * Skin Version: 3.0 (jPlayer 2.0.0)
+ * Date: 20th December 2010
+ */
+
+div.jp-interface,
+div.jp-playlist{
+  background-color: transparent;
+  border:0;
+}
+div.jp-interface{
+  clear: both;
+}
+
+
+
+
+.jp-play-bar,
+.jp-play,
+.jp-pause,
+.jp-previous,
+.jp-next,
+.jp-mute{
+  background-image: url(../images/player-sprite.png);
+  background-repeat: no-repeat;
+}
+.jp-play,
+.jp-pause,
+.jp-previous,
+.jp-next,
+.jp-mute{
+  height:26px;
+  width:28px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -666em;
+  margin-right:3px;
+  
+}
+
+/*Progress bar*/
+.jp-progress{
+  /*background: #363030;*/
+  background: rgba(53,48,48,0.8);
+  padding:2px 0 1px 0;
+  width: 165px;
+  -webkit-box-shadow: inset 0px 1px 1px 1px #2a2626;
+  -moz-box-shadow: inset 0px 1px 1px 1px #2a2626;
+  box-shadow: inset 0px 1px 1px 1px #2a2626;
+  cursor: pointer;
+  float: left;
+  margin-left:15px;
+}
+.jp-play-bar{
+    height: 10px;
+    background-position: 100% 100%;
+}
+/*player buttons*/
+.jp-controls li{
+  display: inline-block;
+  float: left;
+}
+.jp-play{}
+
+.jp-stop,
+.jp-volume-bar{display: none !important;}
+
+.jp-pause{
+  background-position: 0px 0;
+  text-indent: -666em;
+}
+.jp-pause:hover,
+.jp-pause:focus{
+  background-position: -31px 0;
+}
+
+.jp-previous{
+  background-position: -62px 0;
+  text-indent: -666em;
+}
+.jp-previous:hover,
+.jp-previous:focus{
+  background-position: -93px 0;
+}
+.jp-next{
+  background-position: -124px 0;
+  text-indent: -666em;
+}
+.jp-next:hover,
+.jp-next:focus{
+  background-position: -155px 0;
+}
+.jp-mute{}
+
+
+.jp-current-time,
+.jp-duration,
+.time-separator{
+  float: left;
+  display: inline-block;
+  color:#fff;
+}
+.jp-duration{
+  color:#aca2a3;
+}

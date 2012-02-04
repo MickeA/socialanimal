@@ -43,7 +43,7 @@ function sa_image_slideshow_image_default_styles() {
         'module' => 'image',
         'name' => 'image_scale_and_crop',
         'data' => array(
-          'width' => '940',
+          'width' => '941',
           'height' => '400',
         ),
         'weight' => '1',

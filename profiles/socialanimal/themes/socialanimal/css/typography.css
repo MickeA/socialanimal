@@ -17,18 +17,18 @@ body, select, input, textarea {
   line-height: 18px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.pane-page-site-name{
+
+.pane-page-site-name .pane-content{
   font-family: OstrichSansBold, sans-serif;
-}
-
-.pane-page-site-name{
-  font-size: 100px;
-  line-height: 1;
+  display: block;
   text-align: center;
+  font-size: 130px;
+  line-height: 1;
 }
-
-
-
+#music-player .views-field-title{
+  font-family:OstrichSansRoundedMedium;
+}
+  
 /*
  * Links
  */
