@@ -16,6 +16,8 @@
 function sa_custom_quicktabs_alter($quicktabs, $op) {
 
  // Hide quicktabs tabs if user is not allowed to reorder them with draggable views.
+//
+// TODO: We need to fix a template.php function to hide the markup for this also
  if (isset($quicktabs->machine_name) == 'image_slide'){
    if(!user_access('Allow Reordering')) {
       $i = 0;
@@ -25,5 +27,4 @@ function sa_custom_quicktabs_alter($quicktabs, $op) {
       }
     }
   }
-  
 }

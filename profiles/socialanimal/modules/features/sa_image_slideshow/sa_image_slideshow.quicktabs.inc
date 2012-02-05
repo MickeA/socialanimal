@@ -14,8 +14,8 @@ function sa_image_slideshow_quicktabs_default_quicktabs() {
   $quicktabs->disabled = FALSE; /* Edit this to true to make a default quicktabs disabled initially */
   $quicktabs->api_version = 1;
   $quicktabs->machine_name = 'image_slide';
-  $quicktabs->ajax = 1;
-  $quicktabs->hide_empty_tabs = FALSE;
+  $quicktabs->ajax = 0;
+  $quicktabs->hide_empty_tabs = TRUE;
   $quicktabs->default_tab = 0;
   $quicktabs->title = 'Image slide';
   $quicktabs->tabs = array(
@@ -27,17 +27,12 @@ function sa_image_slideshow_quicktabs_default_quicktabs() {
       'type' => 'block',
     ),
     1 => array(
-      'bid' => 'panels_mini_delta_image_slideshow_reorder',
-      'hide_title' => 1,
+      'vid' => 'image_slide',
+      'display' => 'reorder_slideshow',
+      'args' => '',
       'title' => 'Reorder/edit',
       'weight' => '-99',
-      'type' => 'block',
-    ),
-    2 => array(
-      'path' => 'node/add/slideshow-image',
-      'title' => 'Add',
-      'weight' => '-98',
-      'type' => 'callback',
+      'type' => 'view',
     ),
   );
   $quicktabs->renderer = 'quicktabs';
@@ -46,7 +41,6 @@ function sa_image_slideshow_quicktabs_default_quicktabs() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Add');
   t('Image slide');
   t('Reorder/edit');
   t('View');

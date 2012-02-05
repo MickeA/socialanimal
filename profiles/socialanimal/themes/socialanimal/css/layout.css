@@ -63,3 +63,6 @@ body:before {
 .main{
   padding:10px 0;
 }
+.quicktabs-wrapper .main{
+  padding:0;
+}
