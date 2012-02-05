@@ -35,6 +35,8 @@ function sa_music_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['style_options']['group_rendered'] = 1;
   $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = 0;
+  $handler->display->display_options['row_options']['default_field_elements'] = 1;
   /* Field: hide-show */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -164,7 +166,7 @@ function sa_music_views_default_views() {
     'preload' => 'metadata',
     'volume' => '80',
     'muted' => '0',
-    'repeat' => 'none',
+    'repeat' => 'all',
     'backgroundColor' => '000000',
   );
   $handler->display->display_options['fields']['field_music_file_1']['group_rows'] = 1;

@@ -19,8 +19,16 @@ div.jp-playlist{
   background-color: transparent;
   border:0;
 }
+div.jp-playlist{
+  float: left;
+  padding-bottom: 10px;
+  max-width:266px;
+}
+
 div.jp-interface{
   clear: both;
+  float: left;
+  width: 100%;
 }
 
 
