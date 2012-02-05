@@ -18,7 +18,6 @@ dependencies[] = menu
 dependencies[] = taxonomy
 dependencies[] = field
 dependencies[] = field_ui
-dependencies[] = file
 dependencies[] = filter
 
 ; Contrib
