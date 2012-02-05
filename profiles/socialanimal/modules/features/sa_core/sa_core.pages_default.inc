@@ -295,11 +295,14 @@ function sa_core_default_page_manager_pages() {
     $pane = new stdClass;
     $pane->pid = 'new-7';
     $pane->panel = 'branding';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'image_slide-panel_pane_1';
+    $pane->type = 'block';
+    $pane->subtype = 'quicktabs-image_slide';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -312,27 +315,6 @@ function sa_core_default_page_manager_pages() {
     $display->panels['branding'][0] = 'new-7';
     $pane = new stdClass;
     $pane->pid = 'new-8';
-    $pane->panel = 'branding';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'music_player-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => 'music-player',
-      'css_class' => '',
-    );
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['branding'][1] = 'new-8';
-    $pane = new stdClass;
-    $pane->pid = 'new-9';
     $pane->panel = 'branding';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -354,12 +336,12 @@ function sa_core_default_page_manager_pages() {
       'css_class' => 'social-links',
     );
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['branding'][2] = 'new-9';
+    $display->content['new-8'] = $pane;
+    $display->panels['branding'][1] = 'new-8';
     $pane = new stdClass;
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-9';
     $pane->panel = 'main';
     $pane->type = 'custom';
     $pane->subtype = 'custom';
@@ -380,8 +362,8 @@ function sa_core_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['main'][0] = 'new-10';
+    $display->content['new-9'] = $pane;
+    $display->panels['main'][0] = 'new-9';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

@@ -19,6 +19,7 @@ dependencies[] = taxonomy
 dependencies[] = field
 dependencies[] = field_ui
 dependencies[] = filter
+dependencies[] = block
 
 ; Contrib
 dependencies[] = admin_menu
@@ -26,6 +27,7 @@ dependencies[] = admin_menu_toolbar
 dependencies[] = taxonomy_menu_form
 dependencies[] = views
 dependencies[] = views_content
+dependencies[] = draggableviews
 dependencies[] = panels
 dependencies[] = panels_everywhere
 dependencies[] = panels_mini
@@ -41,6 +43,8 @@ dependencies[] = views_slideshow_cycle
 dependencies[] = file_entity
 dependencies[] = media
 dependencies[] = image
+dependencies[] = quicktabs
+
 
 ; DEVELOPMENT MODULES
 dependencies[] = devel
