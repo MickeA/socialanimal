@@ -1,0 +1,14 @@
+
+#edit-data-matrix .fieldset-wrapper {
+  padding:0;
+}
+
+#edit-data-matrix .form-wrapper {
+  border:0;
+  margin:0;
+  padding:2px;
+}
+
+#edit-data-matrix .form-item{
+  display: inline;
+}

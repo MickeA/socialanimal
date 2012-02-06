@@ -1,0 +1,181 @@
+<?php
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function semantic_panels_ctools_plugin_directory($module, $plugin) {
+  if ($module === 'panels' || $module === 'ctools' && !empty($plugin)) {
+    return "plugins/{$plugin}";
+  }
+}
+
+/**
+ *
+ */
+function _semantic_panels_get_elements() {
+  static $elements = NULL;
+
+  if (!isset($elements)) {
+    $elements = variable_get('semantic_panels_rewrite_elements', array(
+        '' => t('- Use default -'),
+        '0' => t('- None -'),
+        'div' => 'DIV',
+        'span' => 'SPAN',
+        'h1' => 'H1',
+        'h2' => 'H2',
+        'h3' => 'H3',
+        'h4' => 'H4',
+        'h5' => 'H5',
+        'h6' => 'H6',
+        'p' => 'P',
+        'strong' => 'STRONG',
+        'em' => 'EM',
+      ));
+  }
+
+  return $elements;
+}
+
+function template_preprocess_semantic_panels_pane(&$vars){
+
+  // Make $vars contain all the stuff that the normal panels_pane has
+  template_preprocess_panels_pane(&$vars);
+
+  $pane_semantic_settings = $vars['settings'];
+
+  /* TITLE WRAPPER */
+  $vars['title_html'] = '';
+  if($vars['title']){
+
+    $element_data = array(
+      'content' => $vars['title'],
+      'default_type' => 'h2',
+      'default_classes' => 'pane-title'
+    );
+
+    $vars['title_html'] = _semantic_panels_get_html('element_title', $element_data, $pane_semantic_settings);
+
+  }
+
+  /* CONTENT WRAPPER */
+  $vars['content_html'] = '';
+  if($vars['content']){
+
+    $element_data = array(
+      'content' => $vars['content'],
+      'default_type' => 'div',
+      'default_classes' => 'pane-content'
+    );
+
+    $vars['content_html'] = _semantic_panels_get_html('element_content', $element_data, $pane_semantic_settings);
+
+  }
+
+  /* FULL PANE WRAPPER */
+  $vars['wrapper_type'] = _semantic_panels_get_type($pane_semantic_settings['element_wrapper']['type']);
+
+  if(!empty($pane_semantic_settings['element_wrapper']['class'])){
+    $vars['classes_array'][] = $pane_semantic_settings['element_wrapper']['class'];
+  }
+
+}
+
+function _semantic_panels_get_html($element_key, $element_data, $pane_semantic_settings){
+
+  $element_settings = $pane_semantic_settings[$element_key];
+
+  $element_settings['type'] = _semantic_panels_get_type($element_settings['type'], $element_data['default_type']);
+
+  if($element_settings['type']){
+
+    $class = '';
+    if ($pane_semantic_settings['add_default_classes']) {
+      $class = $element_data['default_classes'];
+    }
+
+    if ($element_settings['class_enable'] && $element_settings['class']) {
+      if ($class) {
+        $class .= ' ';
+      }
+
+      $class .= $element_settings['class'];
+    }
+
+    $pre = '<' . $element_settings['type'];
+    if ($class) {
+      $pre .= ' class="' . $class . '"';
+    }
+    $pre .= '>';
+
+    return $pre . render($element_data['content']) . '</' . $element_settings['type'] . '>';
+
+  }else{
+
+    return render($element_data['content']);
+
+  }
+
+};
+
+function _semantic_panels_get_type($type_setting, $default_type = 'div'){
+
+  if ($type_setting === '0') {
+    return '';
+  }
+
+  if($type_setting === ''){
+    return $default_type;
+  }
+
+  if ($type_setting) {
+    return check_plain($type_setting);
+  }
+
+};
+
+/**
+ * Implementation of hook_theme()
+ */
+function semantic_panels_theme() {
+
+  $theme = array();
+  $theme['semantic_panels_pane'] = array(
+    'variables' => array('output' => array(), 'pane' => array(), 'display' => array()),
+    'path' => drupal_get_path('module', 'semantic_panels') . '/templates',
+    'template' => 'semantic-panels-pane'
+  );
+
+  return $theme;
+}
+
+// Code from views:
+/**
+ * Move form elements into fieldsets for presentation purposes.
+ *
+ * Many views forms use #tree = TRUE to keep their values in a hierarchy for
+ * easier storage. Moving the form elements into fieldsets during form building
+ * would break up that hierarchy. Therefore, we wait until the pre_render stage,
+ * where any changes we make affect presentation only and aren't reflected in
+ * $form_state['values'].
+ */
+function semantic_panels_pre_render_add_fieldset_markup($form) {
+  foreach (element_children($form) as $key) {
+    $element = $form[$key];
+    // In our form builder functions, we added an arbitrary #fieldset property
+    // to any element that belongs in a fieldset. If this form element has that
+    // property, move it into its fieldset.
+    if (isset($element['#fieldset']) && isset($form[$element['#fieldset']])) {
+      $form[$element['#fieldset']][$key] = $element;
+      // Remove the original element this duplicates.
+      unset($form[$key]);
+    }
+  }
+
+  return $form;
+}
+
+function _semantic_panels_prepare_element_settings($element_settings){
+  $element_settings['type'] = _semantic_panels_get_type($element_settings['type']);
+
+  return $element_settings;
+}

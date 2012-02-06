@@ -1,0 +1,20 @@
+Module Filter 7.x-1.3, 2011-03-07
+---------------------------------
+by realityloop: Updated CHANGELOG.txt
+
+Module Filter 7.x-1.2, 2011-03-07
+---------------------------------
+by realityloop: Changed placement of Submit buttons for other languages
+
+Module Filter 7.x-1.1, 2011-03-07
+---------------------------------
+by realityloop: first commit via git, broke the release somehow :/
+
+Module Filter 7.x-1.0, 2011-01-04
+---------------------------------
+by realityloop: Fixed Undefined index error.
+
+Module Filter 7.x-x.x, xxxx-xx-xx
+---------------------------------
+by greenSkin: Removed unused .css and .js files.
+

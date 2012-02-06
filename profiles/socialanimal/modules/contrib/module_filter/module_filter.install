@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ *
+ * @author greenSkin
+ */
+
+
+/**
+ * Implementation of hook_update().
+ */
+function module_filter_update_7100() {
+  variable_del('module_filter_autocomplete');
+  drupal_set_message($message = 'Autocomplete setting was removed in this release, we just cleaned up the variables table.', $type = 'status');
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function module_filter_uninstall() {
+  variable_del('module_filter_tabs');
+  variable_del('module_filter_autocomplete');
+}

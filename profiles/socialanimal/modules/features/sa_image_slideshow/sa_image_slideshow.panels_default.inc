@@ -49,7 +49,6 @@ function sa_image_slideshow_default_panels_mini() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $pane->locks = array();
     $display->content['new-1'] = $pane;
     $display->panels['main'][0] = 'new-1';
     $pane = new stdClass;
@@ -70,7 +69,6 @@ function sa_image_slideshow_default_panels_mini() {
     );
     $pane->extras = array();
     $pane->position = 1;
-    $pane->locks = array();
     $display->content['new-2'] = $pane;
     $display->panels['main'][1] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
@@ -103,7 +101,7 @@ function sa_image_slideshow_default_panels_mini() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass;
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-1';
     $pane->panel = 'main';
     $pane->type = 'views_panes';
     $pane->subtype = 'image_slide-reorder_slideshow';
@@ -128,11 +126,10 @@ function sa_image_slideshow_default_panels_mini() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['main'][0] = 'new-3';
+    $display->content['new-1'] = $pane;
+    $display->panels['main'][0] = 'new-1';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-3';
+  $display->title_pane = 'new-1';
   $mini->display = $display;
   $export['image_slideshow_reorder'] = $mini;
 

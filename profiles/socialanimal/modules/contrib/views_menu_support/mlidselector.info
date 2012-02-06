@@ -1,0 +1,7 @@
+name = MLID Selector
+description = "Widget for integer fields"
+package = Views
+core = 7.x
+dependencies[] = views
+dependencies[] = vms
+files[] = mlid_selector.module

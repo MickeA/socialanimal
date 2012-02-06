@@ -1,0 +1,12 @@
+diff U3Bib a/content_access.module b/content_access.module
+--- a/content_access.module	Thu Jul 07 20:04:34 2011
++++ b/content_access.module	Tue Jul 12 10:54:00 2011
+@@ -508,7 +508,7 @@
+   if (count(array_diff($all, $rids['view'])) == 0) {
+     // Grant view access to all instead of single roles
+     $rids['view'] = array('all');
+-    $grants['all'] = array('realm' => 'content_access_all', 'gid' => 0, 'grant_view' => 1, 'grant_update' => 0, 'grant_delete' => 0, 'priority' => content_access_get_settings('priority', $node->type));
++    $grants['all'] = array('realm' => 'all', 'gid' => 0, 'grant_view' => 1, 'grant_update' => 0, 'grant_delete' => 0, 'priority' => content_access_get_settings('priority', $node->type));
+   }
+ 
+   // If authenticated users are involved, remove unnecessary other roles.

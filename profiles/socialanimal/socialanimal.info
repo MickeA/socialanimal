@@ -8,7 +8,7 @@ theme = seven
 ; sites and some other goodies that is required for NodeStream to work.
 ; We use a module instead of a profile, since it we can make NodeStream
 ; features profile independent.
-dependencies[] = ns_core
+;dependencies[] = ns_core
 
 ; Core
 dependencies[] = menu
@@ -24,7 +24,6 @@ dependencies[] = block
 ; Contrib
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
-dependencies[] = taxonomy_menu_form
 dependencies[] = views
 dependencies[] = views_content
 dependencies[] = draggableviews
