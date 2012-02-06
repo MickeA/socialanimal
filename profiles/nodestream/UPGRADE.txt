@@ -1,8 +1,0 @@
-UPGRADING
------------
-
-To upgrade NodeStream, check out the new tag (for instance 6.x-beta2)
-and run update.php (or drush updatedb).
-
-Specific upgrade instructions will be in this document, please consult it
-before you attempt a new upgrade.
