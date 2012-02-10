@@ -70,6 +70,7 @@ box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2); */
  margin-right:10px;
  margin-bottom: 10px;
  line-height: 0;
+ width:27%;
 }
 .playlist-hidden{
   position: absolute;
@@ -85,7 +86,8 @@ box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2); */
   z-index: 100;
   color:#fff;
 }
-.view-image-slide{
+.view-image-slide,
+.pane-image-slide-image-slideshow{
   line-height: 0;
   overflow: hidden;
 }
@@ -93,13 +95,10 @@ box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2); */
 .views-slideshow-controls-bottom #views_slideshow_controls_text_pause_image_slide-image_slideshow{
   display: none;  
 }
-.views-slideshow-controls-bottom{
-  width: 941px;
-  height:400px;
-  
-}
+
 .view-image-slide:hover .views-slideshow-controls-bottom{
   display: block;
+  width:100%;
   
 }
 .views-slideshow-controls-bottom #views_slideshow_controls_text_next_image_slide-image_slideshow{
@@ -117,6 +116,16 @@ z-index: 100;
 cursor: pointer;
 }
 
+/* Try to make images responsive*/
+.views-slideshow-cycle-main-frame-row{
+  width:100% !important;
+}
+.views-slideshow-cycle-main-frame-row img{
+  width:100% !important;
+}
+.views-field-field-music-image img{
+  width:100%;
+}
 /**
  * Social links
  **/

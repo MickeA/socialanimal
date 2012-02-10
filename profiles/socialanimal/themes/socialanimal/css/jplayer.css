@@ -62,7 +62,7 @@ div.jp-interface{
   /*background: #363030;*/
   background: rgba(53,48,48,0.8);
   padding:2px 0 1px 0;
-  width: 165px;
+  width: 40%;
   -webkit-box-shadow: inset 0px 1px 1px 1px #2a2626;
   -moz-box-shadow: inset 0px 1px 1px 1px #2a2626;
   box-shadow: inset 0px 1px 1px 1px #2a2626;
@@ -75,6 +75,11 @@ div.jp-interface{
     background-position: 100% 100%;
 }
 /*player buttons*/
+.jp-controls{
+  width:33%;
+  float: left;
+  display: inline-block;
+}
 .jp-controls li{
   display: inline-block;
   float: left;
