@@ -43,6 +43,7 @@ dependencies[] = file_entity
 dependencies[] = media
 dependencies[] = image
 dependencies[] = quicktabs
+dependencies[] = auto_nodetitle
 
 
 ; DEVELOPMENT MODULES
