@@ -34,6 +34,13 @@ function sa_image_slideshow_quicktabs_default_quicktabs() {
       'weight' => '-99',
       'type' => 'view',
     ),
+    2 => array(
+      'bid' => 'panels_mini_delta_add_slideshow_image_form',
+      'hide_title' => 1,
+      'title' => 'Add',
+      'weight' => '-98',
+      'type' => 'block',
+    ),
   );
   $quicktabs->renderer = 'quicktabs';
   $quicktabs->style = 'nostyle';
@@ -41,6 +48,7 @@ function sa_image_slideshow_quicktabs_default_quicktabs() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Add');
   t('Image slide');
   t('Reorder/edit');
   t('View');
