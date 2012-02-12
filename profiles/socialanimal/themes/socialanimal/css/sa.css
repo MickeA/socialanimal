@@ -1,5 +1,6 @@
 body{
-  background:#e9e1da url("../images/sa-bg.jpg") repeat scroll 0 0;
+ /* background:#e9e1da url("../images/sa-bg.jpg") repeat scroll 0 0;*/
+  background:#e9e1da url("../images/sa-bg2.png") repeat scroll 0 0;
 }
 .header .grid-12{
   background: transparent url("../images/2line-border.png") repeat-x scroll 0 100%;

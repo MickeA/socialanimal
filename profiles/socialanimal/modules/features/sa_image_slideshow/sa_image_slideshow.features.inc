@@ -42,7 +42,7 @@ function sa_image_slideshow_image_default_styles() {
   $styles['slideshow_image'] = array(
     'name' => 'slideshow_image',
     'effects' => array(
-      2 => array(
+      1 => array(
         'label' => 'Scale',
         'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
         'effect callback' => 'image_scale_effect',
@@ -53,11 +53,11 @@ function sa_image_slideshow_image_default_styles() {
         'data' => array(
           'width' => '941',
           'height' => '',
-          'upscale' => 0,
+          'upscale' => 1,
         ),
         'weight' => '-10',
       ),
-      3 => array(
+      2 => array(
         'label' => 'Crop',
         'help' => 'Cropping will remove portions of an image to make it the specified dimensions.',
         'effect callback' => 'image_crop_effect',

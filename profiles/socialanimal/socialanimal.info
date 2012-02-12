@@ -44,6 +44,9 @@ dependencies[] = quicktabs
 dependencies[] = auto_nodetitle
 dependencies[] = rules
 dependencies[] = media
+dependencies[] = semanticviews
+dependencies[] = semantic_panels
+
 
 ; DEVELOPMENT MODULES
 dependencies[] = devel
