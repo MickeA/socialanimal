@@ -162,6 +162,8 @@ function _draggableviews_info($view, $info = NULL) {
       }
 
       $info['locked'] = strcmp($options['tabledrag_lock']['lock'], 'lock') == 0 ? TRUE : FALSE;
+
+      $info['needs_pager_modifications'] = $view->use_pager() && (!empty($info['view_window_extensions']['extension_top']) || !empty($info['view_window_extensions']['extension_bottom']) || isset($info['hierarchy']));
     }
   }
 
@@ -388,7 +390,7 @@ function _draggableviews_rebuild_hierarchy(&$info) {
   // We backup the page settings and restore them after completing all operations.
   $pager = $info['view']->query->pager;
 
-  if ($info['view']->use_pager()) {
+  if ($info['needs_pager_modifications']) {
     // We have to make sure that there's no hidden node with an order value that refers to the current page.
     // If the items to display per page are limitated we load the entire view.
     //@todo: We reduce the fields to a minimum because of performance issues.
@@ -979,7 +981,7 @@ function _draggableviews_check_node_order($nid, &$info) {
 function _draggableviews_reload_info(&$info, $items_per_page = NULL, $current_page = NULL, $offset = NULL) {
   // Re-execute the view because order values may have changed.
 
-  _draggableviews_re_execute_view($info['view'], $items_per_page, $current_page, $offset);
+  _draggableviews_re_execute_view($info['view'], $info, $items_per_page, $current_page, $offset);
   // Reload nodes of the info array.
 
   $info = _draggableviews_info($info['view'], $info);
@@ -990,12 +992,14 @@ function _draggableviews_reload_info(&$info, $items_per_page = NULL, $current_pa
  *
  * @param $view
  *   The view object.
+ * @param $info
+ *   The structured info array. Look at _draggableviews_info(..) to learn more.
  * @param $items_per_page
  * @param $current_page
  * @param $offset
  */
-function _draggableviews_re_execute_view(&$view, $items_per_page = NULL, $current_page = NULL, $offset = NULL) {
-  if ($view->use_pager()) {
+function _draggableviews_re_execute_view(&$view, $info, $items_per_page = NULL, $current_page = NULL, $offset = NULL) {
+  if ($info['needs_pager_modifications']) {
     if (isset($items_per_page)) {
       $view->query->pager->options['items_per_page'] = $items_per_page;
     }
