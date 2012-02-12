@@ -1,8 +1,4 @@
 <?php
-/**
- * @file
- * features_test.features.field.inc
- */
 
 /**
  * Implements hook_field_default_fields().
@@ -28,7 +24,7 @@ function features_test_field_default_fields() {
       ),
       'indexes' => array(
         'format' => array(
-          0 => 'format',
+          '0' => 'format',
         ),
       ),
       'module' => 'text',
@@ -82,7 +78,6 @@ function features_test_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
-        'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
@@ -95,10 +90,6 @@ function features_test_field_default_fields() {
       ),
     ),
   );
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('Test');
 
   return $fields;
 }
