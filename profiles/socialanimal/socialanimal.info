@@ -38,23 +38,24 @@ dependencies[] = strongarm
 dependencies[] = wysiwyg
 dependencies[] = views_slideshow
 dependencies[] = views_slideshow_cycle
-;dependencies[] = google_fonts
 dependencies[] = file_entity
-dependencies[] = media
 dependencies[] = image
 dependencies[] = quicktabs
 dependencies[] = auto_nodetitle
-
+dependencies[] = rules
+dependencies[] = media
 
 ; DEVELOPMENT MODULES
 dependencies[] = devel
 dependencies[] = views_ui
 dependencies[] = module_filter
+;dependencies[] = rules_admin
 
 ; Silvia Media features
 dependencies[] = sa_core
 dependencies[] = sa_music
 dependencies[] = sa_image_slideshow
+dependencies[] = sa_permissions
 
 ; NodeStream features. We can pick which features we want to use,
 ; no NodeStream features are required.
