@@ -137,7 +137,6 @@ function rules_data_list_info_alter(&$element_info, RulesAbstractPlugin $element
  * Action: Remove a list item.
  */
 function rules_action_data_list_remove($list, $item) {
-  $item = isset($item->original) ? $item->original : $item;
   foreach (array_keys($list, $item) as $key) {
     unset($list[$key]);
   }
