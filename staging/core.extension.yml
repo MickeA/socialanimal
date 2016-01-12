@@ -9,6 +9,7 @@ module:
   config: 0
   contact: 0
   contextual: 0
+  ctools: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
@@ -22,10 +23,12 @@ module:
   image: 0
   link: 0
   menu_ui: 0
+  metatag: 0
   node: 0
   options: 0
   page_cache: 0
   path: 0
+  pathauto: 0
   quickedit: 0
   rdf: 0
   search: 0
@@ -33,6 +36,7 @@ module:
   system: 0
   taxonomy: 0
   text: 0
+  token: 0
   toolbar: 0
   tour: 0
   update: 0
@@ -44,7 +48,7 @@ module:
 theme:
   stable: 0
   classy: 0
-  bartik: 0
   seven: 0
+  social: 0
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU

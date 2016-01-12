@@ -1,16 +1,16 @@
-uuid: 1074da2a-1ba0-4fe9-8300-0f1f3dffba6f
+uuid: 78aa0094-5e85-4797-9b08-8f83018bac29
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
+    - social
 _core:
   default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
-id: bartik_messages
-theme: bartik
-region: highlighted
+id: social_messages
+theme: social
+region: header
 weight: 0
 provider: null
 plugin: system_messages_block

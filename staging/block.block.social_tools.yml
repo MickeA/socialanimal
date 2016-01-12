@@ -1,4 +1,4 @@
-uuid: 4e17b785-3dc3-4f6f-ac08-8e609a8f804a
+uuid: 8908b166-5dcf-43ee-bd51-815cd7c037a9
 langcode: en
 status: true
 dependencies:
@@ -7,12 +7,12 @@ dependencies:
   module:
     - system
   theme:
-    - bartik
+    - social
 _core:
   default_config_hash: NeHSoqm4XFqA7_0bDmR429ZZQt3LRbZMNRJTMsFyOfI
-id: bartik_tools
-theme: bartik
-region: sidebar_first
+id: social_tools
+theme: social
+region: header
 weight: 0
 provider: null
 plugin: 'system_menu_block:tools'

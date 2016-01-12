@@ -35,6 +35,7 @@
         "drush/config-extra": "dev-master",
         "drupal/console": "dev-master",
         "drupal/memcache": "8.2.*",
+        "drupal/ctools": "8.3.0-alpha21",
         "drupal/field_group": "8.1.0-rc3",
         "drupal/token": "8.1.*@dev",
         "md-systems/pathauto": "^8.1",

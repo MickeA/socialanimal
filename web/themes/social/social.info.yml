@@ -1,0 +1,13 @@
+name: Social
+type: theme
+description: "Theme for d8. Implementation by Mike"
+core: 8.x
+version: 8.x
+base theme: classy
+libraries:
+ - social/global
+regions:
+#  alert: 'Alert'
+  header: 'Header'
+#  breadcrumb: 'Breadcrumb'
+  content: 'Content'

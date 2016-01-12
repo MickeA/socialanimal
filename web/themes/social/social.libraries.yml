@@ -1,0 +1,18 @@
+global:
+  version: 1.x
+  css:
+    theme:
+      dist/css/main.css: {}
+#      dist/iecss/ie.css: { preprocess: false, browsers: { IE: 'lte IE 9', '!IE': false }}
+  js:
+#    js/libraries/bootstrap/dropdown.js: {}
+#    js/libraries/jquery.cookie.js: {}
+#    js/libraries/backtotop.js: {}
+#    js/libraries/shame.js: {}
+
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

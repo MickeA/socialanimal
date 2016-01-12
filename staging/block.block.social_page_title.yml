@@ -1,13 +1,13 @@
-uuid: 4e6311d9-01ed-45e7-8420-327c795d0b78
+uuid: 8f9b05ab-0326-4597-9500-e015044c93b2
 langcode: en
 status: true
 dependencies:
   theme:
-    - bartik
+    - social
 _core:
   default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
-id: bartik_page_title
-theme: bartik
+id: social_page_title
+theme: social
 region: content
 weight: -50
 provider: null
