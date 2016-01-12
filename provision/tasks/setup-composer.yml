@@ -1,0 +1,28 @@
+---
+- name: Install Composer globally
+  shell: curl -sS https://getcomposer.org/installer | /usr/bin/php && /bin/mv -f composer.phar /usr/local/bin/composer creates=/usr/local/bin/composer
+  tags: [composer, php]
+  
+- name: Create global .composer folder
+  file: path={{ composer_user_home }}/.composer owner={{ composer_user }} state=directory
+  tags: [composer, php]
+  
+- name: Create global composer.json file
+  template: src=composer.j2 dest={{ composer_user_home }}/.composer/composer.json owner={{ composer_user }}
+  register: create_composer_file
+  tags: [composer, php]
+
+- name: Create auth.json file with the token
+  template: src=composer_auth.j2 dest={{ composer_user_home }}/.composer/auth.json owner={{ composer_user }}
+  register: create_composer_file
+  tags: [composer, php]
+
+- name: Install the composer.json file only if it was updated
+  shell: /usr/local/bin/composer global update --no-interaction --no-ansi
+  when: create_composer_file|changed
+  sudo_user: "{{ composer_user }}"
+  
+- name: Add global composer bin directory to PATH
+  lineinfile: dest={{composer_user_home}}/.bashrc line="export PATH=$PATH:~/.composer/vendor/bin"
+  register: composerinstalled
+  tags: [composer, php]

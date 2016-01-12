@@ -1,0 +1,13 @@
+---
+selenium_branch: 2.48
+selenium_version: 2.48.2
+selenium_port: 4444
+selenium_dir: /opt/selenium
+tmp_dir: "{{ selenium_dir }}/tmp"
+with_chromedriver: true
+chromedriver_version: 2.20
+with_phantomjs: true
+phantomjs_version: 1.9.7
+download_url: http://selenium-release.storage.googleapis.com/{{selenium_branch}}/{{jar_file}}
+jar_file: selenium-server-standalone-{{selenium_version}}.jar
+sel_role: standalone

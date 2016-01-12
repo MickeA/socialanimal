@@ -1,0 +1,16 @@
+## YAML Template.
+---
+    - hosts: all
+      tasks:
+      - include: tasks/setup-apache2.yml
+      - include: tasks/setup-misc.yml
+      - include: tasks/setup-mysql.yml
+      - include: tasks/setup-php.yml
+      - include: tasks/setup-composer.yml
+      #- include: tasks/setup-java.yml
+      #- include: tasks/setup-selenium.yml
+      - include: tasks/setup-chromedriver.yml
+      - include: tasks/setup-phantomjs.yml
+
+      handlers:
+      - include: handlers/restart-apache.yml

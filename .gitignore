@@ -1,15 +1,78 @@
-log/*
-!log/README.txt
-tmp/*
-!tmp/README.txt
-web/sites/*/backup
-web/sites/*/files/*
-!web/sites/*/files/README.txt
+S X
 .DS_Store
-nbproject
+.AppleDouble
+.LSOverride
+Icon
 ._*
+.Spotlight-V100
+.Trashes
+# Linux
+
+!.gitattributes
+!.gitignore
+!.gitkeep
+*~
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+# NetBeans
+nbproject/
+nbproject/private/
+build/
+nbbuild/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+# PhpStorm
+.idea/
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+# Vim
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+# Emacs
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+.org-id-locations
+# Sublime
+Drupal.sublime-projectcompletions
+# Compass
 .sass-cache
-.project
-.settings
-sites/default/files*
-sites/default/files/*
+
+
+# Drupal 8
+vendor
+web/core
+web/modules/contrib
+web/themes/contrib
+web/profiles/contrib
+web/sites/default/settings.local.php
+
+# Ignore Drupal's file directory
+web/sites/default/files
+
+
+!puphpet/puppet/modules/
+tmp
+web-old
+
+npm-debug.log
+*.tar.gz
+node_modules
+web_staging
+
+.vagrant
+ngrok
+web/composer.lock
+web/staging
+composer.lock

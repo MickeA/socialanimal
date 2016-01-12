@@ -1,0 +1,16 @@
+<VirtualHost *>
+  ServerName {{ server_hostname }}
+  DocumentRoot {{ drupal_root }}
+  <Directory {{ drupal_root }}>
+    # Allow from all as default.
+      Require all granted
+      AllowOverride All
+    # Allow symlinks.
+    Options FollowSymLinks
+    # Set the default handler.
+    DirectoryIndex index.php
+
+    # Make Drupal handle any 404 errors.
+    ErrorDocument 404 /index.php
+  </Directory>
+</VirtualHost>

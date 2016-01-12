@@ -1,0 +1,16 @@
+---
+
+  - name: Install Apache2
+    apt: name=apache2 state=latest update_cache=true
+
+  - shell: a2enmod rewrite
+    notify: restart apache2
+
+  - file: path=/etc/apache2/sites-enabled/000-default.conf state=absent
+  
+  - template:
+      src=templates/vhost.j2
+      dest=/etc/apache2/sites-enabled/drupal.conf
+      owner=root group=root mode=0644
+    notify: restart apache2
+

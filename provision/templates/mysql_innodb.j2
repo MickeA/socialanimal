@@ -1,0 +1,41 @@
+# This file can be used on a single DB Server with at least 8 G of memory
+# Note for
+
+skip-name-resolve
+bind-address = *
+
+log-slow-queries="/var/log/mysql/slow-query.log"
+long_query_time=1
+log-queries-not-using-indexes
+
+innodb_buffer_pool_size= {{ (box_mem/2)|int }}M
+
+innodb_file_per_table
+innodb_log_file_size={{ (box_mem/8)|int }}M
+innodb_log_buffer_size={{ (box_mem/8)|int }}M
+
+
+innodb_flush_log_at_trx_commit=2
+innodb_thread_concurrency = 0
+innodb_flush_method=O_DIRECT
+
+query_cache_size = 64M
+key_buffer_size = 32M
+query_cache_limit = 8M
+query_cache_min_res_limit = 2M
+
+table_cache = 12800
+
+sort_buffer_size=2M
+read_rnd_buffer_size = 4M
+myisam_sort_buffer_size = 32M
+
+read_buffer_size=128K
+
+open_files_limit               = 1000
+table_definition_cache         = 1024
+table_open_cache               = 6000
+
+max_heap_table_size=512M
+tmp_table_size=256M
+

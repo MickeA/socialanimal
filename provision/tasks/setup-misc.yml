@@ -1,0 +1,19 @@
+---
+  - name: Remove rubbish
+    apt: pkg={{item}} state=absent
+    with_items:
+      - chef
+      - puppet
+
+  - name: Setup Miscellaneous
+    apt: pkg={{item}} state=latest
+    with_items:
+      - postfix
+      - git-core
+      - rsync
+      - unzip
+      - vim-nox
+      - curl
+
+  - name: Create files folder
+    file: path=/var/www/vgvvkfiles state=directory owner=www-data group=www-data mode=0777

@@ -1,0 +1,12 @@
+{
+    "patches": {
+        "drupal/core": {
+            "Entityreference support in Views": "https://www.drupal.org/files/issues/2174633-42.patch",
+            "Access on heading attributes": "https://www.drupal.org/files/issues/access--2406533-35.patch",
+            "Aggregated CSS should use server-relative URLs inside url() calls within the CSS file": "https://www.drupal.org/files/issues/2375103.patch"
+        },
+        "md-systems/pathauto": {
+           "Pathouto Add check for path field.": "https://www.drupal.org/files/issues/pathauto-2627814-3-8.x-1.x.patch"
+        }
+    }
+}
