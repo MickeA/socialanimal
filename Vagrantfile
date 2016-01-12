@@ -9,7 +9,7 @@
 box_name = "socialanimal.se"
 box_host = "socialanimal.dev"
 box_mem = 3096
-box_ip =  "192.168.50.66"
+box_ip =  "192.168.50.123"
 
 ###
 vagrant_root = File.dirname(__FILE__)
