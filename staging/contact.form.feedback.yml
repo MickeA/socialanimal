@@ -1,0 +1,12 @@
+uuid: d7eeaa02-bcab-4d26-bd08-8afb18586752
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: c4zaT5cyPxuTXI6JOWt3qRtMvICT9tHB6d9a5VG-CmQ
+id: feedback
+label: 'Website feedback'
+recipients:
+  - michael.axelsson@gmail.com
+reply: ''
+weight: 0

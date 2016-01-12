@@ -1,0 +1,14 @@
+uuid: 4fc55b7f-e77a-4597-a700-ea65b9f5af76
+name: 'Social Animal'
+mail: michael.axelsson@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
