@@ -1,5 +1,5 @@
 # Socialstyrelsen
-Repo for Socialstyrelsen
+Repo for Social Animal
 
 ## Installation
 ```
@@ -10,7 +10,7 @@ vagrant ssh
 cd /srv/www/socialstyrelsen
 composer install
 
-Now we can install the site using our custom profile socialstyrelsen:
+Now we can install the site using our custom profile:
 Inside /srv/www/socialstyrelsen/web/sites
 drush si socialstyrelsen --account-name=admin --account-pass=admin --site-name="socialstyrelsen" --db-url=mysql://root:password@localhost/drupal -y
 
