@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the SA Music feature.
- */
-
-include_once('sa_music.features.inc');

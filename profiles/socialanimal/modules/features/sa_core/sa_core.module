@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the SA Core feature.
- */
-
-include_once('sa_core.features.inc');

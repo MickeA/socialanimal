@@ -1,8 +1,0 @@
-name = Semantic Panels
-description = Semantic Panels
-core = 7.x
-package = Panels
-
-dependencies[] = panels
-
-files[] = plugins/styles/semantic_panels.inc

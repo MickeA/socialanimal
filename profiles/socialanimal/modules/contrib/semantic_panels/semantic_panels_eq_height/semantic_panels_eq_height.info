@@ -1,7 +1,0 @@
-name = Semantic Panels: Equal height
-description = Adds the options for the panes to be equal height
-core = 7.x
-package = Panels
-
-dependencies[] = semantic_panels
-dependencies[] = libraries
